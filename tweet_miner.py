@@ -64,11 +64,13 @@ for tweet in results:
    # printing the text stored inside the tweet object
    print(tweet.text)
    
-
+'''
+   
    # Write a row to the CSV file. I use encode UTF-8
    csvWriter.writerow([tweet.text.encode('utf-8')])
    print(tweet.created_at, tweet.text)
 
+'''
 
 # This checks twitter based on a keyword 
 
