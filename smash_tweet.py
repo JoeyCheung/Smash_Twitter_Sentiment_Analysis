@@ -78,7 +78,7 @@ for i,j in enumerate(data):
     tweet = word_tokenize(tweet)
     tweet = [porter.stem(word) for word in tweet] # stemming
     tweet = [lemmatizer.lemmatize(word) for word in tweet] # lemmatizing
-    tweet = [word for word in tweet if word not in stop_words and word not in emoticons and word not in string.punctuation] # remove stop words, punctuations, and emojis (maybe emoji could help add bias to the model though
+    tweet = [word for word in tweet if word not in stop_words and word not in emoticons] # remove stop words, and emojis (maybe emoji could help add bias to the model though
     tweet = s.join(tweet) # join tokens back to string. Textblob needs it in string
     if len(tweet) != 0:
         temp.append(data[i][0])
